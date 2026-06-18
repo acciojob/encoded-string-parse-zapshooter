@@ -1,16 +1,12 @@
-<!DOCTYPE html>
+const parseCode = (str) => {
+  const parts = str.split(/0+/);
+  return {
+    firstName: parts[0],
+    lastName:  parts[1],
+    id:        parts[2],
+  };
+};
 
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
-</html>
+// Do not change the code below
+const str = prompt("Enter str: ");
+alert(JSON.stringify(parseCode(str)));
